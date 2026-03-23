@@ -1,0 +1,131 @@
+:root {
+    --bg: #ffffff;
+    --text: #000;
+    --card: #f0f0f0;
+    --accent: #4f46e5;
+}
+
+.dark {
+    --bg: #0a1224;
+    --text: #00f2ff;
+    --card: #121a35;
+    --accent: #00f2ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.right-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: var(--accent);
+    color: black;
+}
+
+.dark button {
+    box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+}
+
+/* Layout */
+main {
+    padding: 30px;
+}
+
+/* Cards */
+.summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    padding: 25px;
+    background: var(--card);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.dark .card {
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+/* Inputs */
+.input-section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--card);
+    color: var(--text);
+}
+
+/* Chart */
+.chart-section {
+    margin-bottom: 30px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* History */
+.history-section ul {
+    list-style: none;
+}
+
+.history-section li {
+    display: flex;
+    justify-content: space-between;
+    background: var(--card);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.income-item { color: #22c55e; }
+.expense-item { color: #ef4444; }
+
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media(max-width: 700px){
+    .summary {
+        flex-direction: column;
+    }
+}
